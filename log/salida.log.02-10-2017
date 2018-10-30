@@ -1,0 +1,47 @@
+[02/oct 15:27:15 - context.ContextLoader.initWebApplicationContext - 273] - Root WebApplicationContext: initialization started
+[02/oct 15:27:15 - support.AbstractApplicationContext.prepareRefresh - 510] - Refreshing Root WebApplicationContext: startup date [Mon Oct 02 15:27:15 GMT 2017]; root of context hierarchy
+[02/oct 15:27:15 - annotation.ClassPathScanningCandidateComponentProvider.registerDefaultFilters - 239] - JSR-330 'javax.inject.Named' annotation found and supported for component scanning
+[02/oct 15:27:15 - support.AnnotationConfigWebApplicationContext.loadBeanDefinitions - 230] - Successfully resolved class for [mx.com.tecnomotum.integracionlis.config.AppConfig]
+[02/oct 15:27:16 - annotation.AutowiredAnnotationBeanPostProcessor.<init> - 140] - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[02/oct 15:27:16 - support.DefaultListableBeanFactory.preInstantiateSingletons - 598] - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@6fd9a9a7: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,appConfig,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor,cxf,jaxRsServer,resourceListingProvider,jaxRsApiApplication,viajeRestService,kitConfiguracionRestService,kitConfiguracionService,rutasRestService,jsonProvider,apiDeclarationProvider,rutaService,viajeService,apiListingResourceJson,swaggerConfig]; root of factory hierarchy
+[02/oct 15:27:18 - context.ContextLoader.initWebApplicationContext - 313] - Root WebApplicationContext: initialization completed in 2387 ms
+[02/oct 15:28:00 - rest_service.ViajesRestService.getViajes - 96] - a
+[02/oct 15:28:00 - rest_service.ViajesRestService.getViajes - 97] - Sat Sep 30 15:28:00 GMT 2017
+[02/oct 15:28:00 - rest_service.ViajesRestService.getViajes - 98] - Mon Oct 02 15:28:00 GMT 2017
+[02/oct 15:30:01 - rest_service.ViajesRestService.getViajes - 96] - a
+[02/oct 15:30:01 - rest_service.ViajesRestService.getViajes - 97] - Sat Sep 30 15:30:00 GMT 2017
+[02/oct 15:30:01 - rest_service.ViajesRestService.getViajes - 98] - Mon Oct 02 15:30:00 GMT 2017
+[02/oct 15:34:00 - rest_service.ViajesRestService.getViajes - 96] - a
+[02/oct 15:34:00 - rest_service.ViajesRestService.getViajes - 97] - Sat Sep 30 15:34:00 GMT 2017
+[02/oct 15:34:00 - rest_service.ViajesRestService.getViajes - 98] - Mon Oct 02 15:34:00 GMT 2017
+[02/oct 15:37:01 - rest_service.ViajesRestService.getViajes - 96] - a
+[02/oct 15:37:01 - rest_service.ViajesRestService.getViajes - 97] - Sat Sep 30 15:37:00 GMT 2017
+[02/oct 15:37:01 - rest_service.ViajesRestService.getViajes - 98] - Mon Oct 02 15:37:00 GMT 2017
+[02/oct 15:48:08 - rest_service.ViajesRestService.getViajes - 96] - a
+[02/oct 15:48:08 - rest_service.ViajesRestService.getViajes - 97] - Sat Sep 30 15:45:00 GMT 2017
+[02/oct 15:48:08 - rest_service.ViajesRestService.getViajes - 98] - Mon Oct 02 15:45:00 GMT 2017
+[02/oct 18:42:19 - context.ContextLoader.initWebApplicationContext - 273] - Root WebApplicationContext: initialization started
+[02/oct 18:42:19 - support.AbstractApplicationContext.prepareRefresh - 510] - Refreshing Root WebApplicationContext: startup date [Mon Oct 02 18:42:19 GMT 2017]; root of context hierarchy
+[02/oct 18:42:19 - annotation.ClassPathScanningCandidateComponentProvider.registerDefaultFilters - 239] - JSR-330 'javax.inject.Named' annotation found and supported for component scanning
+[02/oct 18:42:19 - support.AnnotationConfigWebApplicationContext.loadBeanDefinitions - 230] - Successfully resolved class for [mx.com.tecnomotum.integracionlis.config.AppConfig]
+[02/oct 18:42:19 - annotation.AutowiredAnnotationBeanPostProcessor.<init> - 140] - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[02/oct 18:42:19 - support.DefaultListableBeanFactory.preInstantiateSingletons - 598] - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@3b114c4f: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,appConfig,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor,cxf,jaxRsServer,resourceListingProvider,jaxRsApiApplication,viajeRestService,kitConfiguracionRestService,kitConfiguracionService,rutasRestService,jsonProvider,apiDeclarationProvider,rutaService,viajeService,apiListingResourceJson,swaggerConfig]; root of factory hierarchy
+[02/oct 18:42:20 - context.ContextLoader.initWebApplicationContext - 313] - Root WebApplicationContext: initialization completed in 888 ms
+[02/oct 18:42:32 - rest_service.ViajesRestService.getViajes - 96] - a
+[02/oct 18:42:32 - rest_service.ViajesRestService.getViajes - 97] - Sat Sep 30 18:41:00 GMT 2017
+[02/oct 18:42:32 - rest_service.ViajesRestService.getViajes - 98] - Mon Oct 02 18:41:00 GMT 2017
+[02/oct 21:54:37 - context.ContextLoader.initWebApplicationContext - 273] - Root WebApplicationContext: initialization started
+[02/oct 21:54:37 - support.AbstractApplicationContext.prepareRefresh - 510] - Refreshing Root WebApplicationContext: startup date [Mon Oct 02 21:54:37 GMT 2017]; root of context hierarchy
+[02/oct 21:54:38 - annotation.ClassPathScanningCandidateComponentProvider.registerDefaultFilters - 239] - JSR-330 'javax.inject.Named' annotation found and supported for component scanning
+[02/oct 21:54:38 - support.AnnotationConfigWebApplicationContext.loadBeanDefinitions - 230] - Successfully resolved class for [mx.com.tecnomotum.integracionlis.config.AppConfig]
+[02/oct 21:54:38 - annotation.AutowiredAnnotationBeanPostProcessor.<init> - 140] - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[02/oct 21:54:38 - support.DefaultListableBeanFactory.preInstantiateSingletons - 598] - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@7b058bfc: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,appConfig,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor,cxf,apiListingResourceJson,resourceListingProvider,jaxRsApiApplication,viajeRestService,kitConfiguracionRestService,kitConfiguracionService,rutasRestService,apiDeclarationProvider,swaggerConfig,jaxRsServer,rutaService,jsonProvider,viajeService]; root of factory hierarchy
+[02/oct 21:54:39 - context.ContextLoader.initWebApplicationContext - 313] - Root WebApplicationContext: initialization completed in 1513 ms
+[02/oct 22:10:54 - rest_service.ViajesRestService.getViajes - 89] - getViajes...
+[02/oct 22:10:54 - rest_service.ViajesRestService.getViajes - 97] - a
+[02/oct 22:10:54 - rest_service.ViajesRestService.getViajes - 98] - Sat Sep 30 21:56:00 GMT 2017
+[02/oct 22:10:54 - rest_service.ViajesRestService.getViajes - 99] - Mon Oct 02 21:56:00 GMT 2017
+[02/oct 22:18:01 - rest_service.ViajesRestService.getViajes - 89] - getViajes...
+[02/oct 22:18:01 - rest_service.ViajesRestService.getViajes - 97] - a
+[02/oct 22:18:01 - rest_service.ViajesRestService.getViajes - 98] - Sat Sep 30 22:18:00 GMT 2017
+[02/oct 22:18:01 - rest_service.ViajesRestService.getViajes - 99] - Mon Oct 02 22:18:00 GMT 2017

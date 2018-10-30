@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+    <property name="dialect">org.hibernate.dialect.SQLServerDialect</property>
+    <property name="connection.driver_class">net.sourceforge.jtds.jdbc.Driver</property>
+    <property name="connection.url">jdbc:jtds:sqlserver://192.168.0.56:1433/hesadb</property>
+    <property name="connection.username">ZAM</property>
+    <property name="connection.password">lis</property>
+    <property name="hibernate.show_sql">false</property>
+    </session-factory>
+</hibernate-configuration>

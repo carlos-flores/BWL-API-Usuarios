@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "dtds/log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/" debug="false">
+    <appender name="logFileERROR" class="org.apache.log4j.DailyRollingFileAppender">
+        <param name="threshold" value="INFO" />
+        <param name="File" value="log/salida.log"/>
+        <param name = "DatePattern" value = "'.'dd-MM-yyyy"/>
+        <layout class="org.apache.log4j.PatternLayout">
+          <param name="ConversionPattern"  value="[%d{dd/MMM HH:mm:ss} - %C{2}.%M - %L] - %m%n"/>          
+       </layout>
+    </appender> 
+    <appender name="logConsoleINFO" class="org.apache.log4j.ConsoleAppender"> 
+        <param name="threshold" value="info" />
+        <layout class="org.apache.log4j.PatternLayout"> 
+            <param name="ConversionPattern" value="%m%n"/> 
+        </layout> 
+    </appender>
+     <logger name="org.hibernate">
+        <level value="error" />
+    </logger>
+    <logger name="org.apache.commons.beanutils.converters">
+        <level value="error" />
+    </logger>
+    <root> 
+        <priority value="debug" />
+        <appender-ref ref="logFileERROR" />  
+        <appender-ref ref="logConsoleINFO" />  
+    </root>
+</log4j:configuration>

@@ -1,0 +1,10 @@
+[21/sep 00:00:43 - context.ContextLoader.initWebApplicationContext - 273] - Root WebApplicationContext: initialization started
+[21/sep 00:00:43 - support.AbstractApplicationContext.prepareRefresh - 510] - Refreshing Root WebApplicationContext: startup date [Thu Sep 21 00:00:43 GMT 2017]; root of context hierarchy
+[21/sep 00:00:43 - annotation.ClassPathScanningCandidateComponentProvider.registerDefaultFilters - 239] - JSR-330 'javax.inject.Named' annotation found and supported for component scanning
+[21/sep 00:00:43 - support.AnnotationConfigWebApplicationContext.loadBeanDefinitions - 230] - Successfully resolved class for [mx.com.tecnomotum.integracionlis.config.AppConfig]
+[21/sep 00:00:43 - annotation.AutowiredAnnotationBeanPostProcessor.<init> - 140] - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[21/sep 00:00:43 - support.DefaultListableBeanFactory.preInstantiateSingletons - 598] - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@bb882f4: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,appConfig,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor,cxf,jaxRsServer,apiDeclarationProvider,viajeRestService,kitConfiguracionRestService,kitConfiguracionService,viajeService,jsonProvider,apiListingResourceJson,resourceListingProvider,jaxRsApiApplication,swaggerConfig]; root of factory hierarchy
+[21/sep 00:00:44 - context.ContextLoader.initWebApplicationContext - 313] - Root WebApplicationContext: initialization completed in 908 ms
+[21/sep 00:01:53 - rest_service.ViajesRestService.getViajes - 96] - a
+[21/sep 00:01:53 - rest_service.ViajesRestService.getViajes - 97] - Fri Sep 01 00:00:00 GMT 2017
+[21/sep 00:01:53 - rest_service.ViajesRestService.getViajes - 98] - Tue Sep 05 00:00:00 GMT 2017

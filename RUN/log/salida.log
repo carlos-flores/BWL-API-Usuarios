@@ -1,0 +1,171 @@
+[14/feb. 11:02:04 - context.ContextLoader.initWebApplicationContext - 273] - Root WebApplicationContext: initialization started
+[14/feb. 11:02:04 - support.AbstractApplicationContext.prepareRefresh - 510] - Refreshing Root WebApplicationContext: startup date [Wed Feb 14 11:02:04 CST 2018]; root of context hierarchy
+[14/feb. 11:02:04 - annotation.ClassPathScanningCandidateComponentProvider.registerDefaultFilters - 239] - JSR-330 'javax.inject.Named' annotation found and supported for component scanning
+[14/feb. 11:02:04 - support.AnnotationConfigWebApplicationContext.loadBeanDefinitions - 230] - Successfully resolved class for [mx.com.tecnomotum.integracionlis.config.AppConfig]
+[14/feb. 11:02:04 - annotation.AutowiredAnnotationBeanPostProcessor.<init> - 140] - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[14/feb. 11:02:04 - support.DefaultListableBeanFactory.preInstantiateSingletons - 598] - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@172b013: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,appConfig,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor,cxf,jaxRsServer,swaggerConfig,apiDeclarationProvider,apiListingResourceJson,resourceListingProvider,jaxRsApiApplication,viajeRestService,viajeService,kitConfiguracionRestService,kitConfiguracionService,jsonProvider]; root of factory hierarchy
+[14/feb. 11:02:04 - support.DefaultSingletonBeanRegistry.destroySingletons - 444] - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@172b013: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,appConfig,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor,cxf,jaxRsServer,swaggerConfig,apiDeclarationProvider,apiListingResourceJson,resourceListingProvider,jaxRsApiApplication,viajeRestService,viajeService,kitConfiguracionRestService,kitConfiguracionService,jsonProvider]; root of factory hierarchy
+[14/feb. 11:02:04 - context.ContextLoader.initWebApplicationContext - 319] - Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'cxf' defined in class mx.com.tecnomotum.integracionlis.config.AppConfig: Initialization of bean failed; nested exception is java.lang.NoClassDefFoundError: javax/annotation/Resource
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:295)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:292)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:628)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:932)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:479)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:389)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:294)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:112)
+	at org.eclipse.jetty.server.handler.ContextHandler.callContextInitialized(ContextHandler.java:800)
+	at org.eclipse.jetty.servlet.ServletContextHandler.callContextInitialized(ServletContextHandler.java:444)
+	at org.eclipse.jetty.server.handler.ContextHandler.startContext(ContextHandler.java:791)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:294)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:741)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:114)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+	at org.eclipse.jetty.server.Server.start(Server.java:387)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:114)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:354)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at mx.com.tecnomotum.integracionlis.Starter.main(Starter.java:58)
+Caused by: java.lang.NoClassDefFoundError: javax/annotation/Resource
+	at org.apache.cxf.common.injection.ResourceInjector.<clinit>(ResourceInjector.java:59)
+	at org.apache.cxf.bus.extension.ExtensionManagerImpl.loadAndRegister(ExtensionManagerImpl.java:237)
+	at org.apache.cxf.bus.extension.ExtensionManagerImpl.getBeansOfType(ExtensionManagerImpl.java:320)
+	at org.apache.cxf.bus.spring.SpringBeanLocator.getBeansOfType(SpringBeanLocator.java:163)
+	at org.apache.cxf.bus.CXFBusImpl.getExtension(CXFBusImpl.java:108)
+	at org.apache.cxf.bus.CXFBusImpl.initialize(CXFBusImpl.java:206)
+	at org.apache.cxf.bus.spring.SpringBus.setApplicationContext(SpringBus.java:90)
+	at org.springframework.context.support.ApplicationContextAwareProcessor.invokeAwareInterfaces(ApplicationContextAwareProcessor.java:117)
+	at org.springframework.context.support.ApplicationContextAwareProcessor.postProcessBeforeInitialization(ApplicationContextAwareProcessor.java:92)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:396)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1475)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:521)
+	... 28 more
+Caused by: java.lang.ClassNotFoundException: javax.annotation.Resource
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:582)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:185)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:496)
+	... 40 more
+[14/feb. 11:29:37 - context.ContextLoader.initWebApplicationContext - 273] - Root WebApplicationContext: initialization started
+[14/feb. 11:29:37 - support.AbstractApplicationContext.prepareRefresh - 510] - Refreshing Root WebApplicationContext: startup date [Wed Feb 14 11:29:37 CST 2018]; root of context hierarchy
+[14/feb. 11:29:37 - annotation.ClassPathScanningCandidateComponentProvider.registerDefaultFilters - 239] - JSR-330 'javax.inject.Named' annotation found and supported for component scanning
+[14/feb. 11:29:37 - support.AnnotationConfigWebApplicationContext.loadBeanDefinitions - 230] - Successfully resolved class for [mx.com.tecnomotum.integracionlis.config.AppConfig]
+[14/feb. 11:29:37 - annotation.AutowiredAnnotationBeanPostProcessor.<init> - 140] - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[14/feb. 11:29:37 - support.DefaultListableBeanFactory.preInstantiateSingletons - 598] - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@172b013: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,appConfig,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor,cxf,jaxRsServer,swaggerConfig,apiDeclarationProvider,apiListingResourceJson,resourceListingProvider,jaxRsApiApplication,viajeRestService,viajeService,kitConfiguracionRestService,kitConfiguracionService,jsonProvider]; root of factory hierarchy
+[14/feb. 11:29:38 - support.DefaultSingletonBeanRegistry.destroySingletons - 444] - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@172b013: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,appConfig,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor,cxf,jaxRsServer,swaggerConfig,apiDeclarationProvider,apiListingResourceJson,resourceListingProvider,jaxRsApiApplication,viajeRestService,viajeService,kitConfiguracionRestService,kitConfiguracionService,jsonProvider]; root of factory hierarchy
+[14/feb. 11:29:38 - context.ContextLoader.initWebApplicationContext - 319] - Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'cxf' defined in class mx.com.tecnomotum.integracionlis.config.AppConfig: Initialization of bean failed; nested exception is java.lang.NoClassDefFoundError: javax/annotation/Resource
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:295)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:292)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:628)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:932)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:479)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:389)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:294)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:112)
+	at org.eclipse.jetty.server.handler.ContextHandler.callContextInitialized(ContextHandler.java:800)
+	at org.eclipse.jetty.servlet.ServletContextHandler.callContextInitialized(ServletContextHandler.java:444)
+	at org.eclipse.jetty.server.handler.ContextHandler.startContext(ContextHandler.java:791)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:294)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:741)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:114)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+	at org.eclipse.jetty.server.Server.start(Server.java:387)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:114)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:354)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at mx.com.tecnomotum.integracionlis.Starter.main(Starter.java:58)
+Caused by: java.lang.NoClassDefFoundError: javax/annotation/Resource
+	at org.apache.cxf.common.injection.ResourceInjector.<clinit>(ResourceInjector.java:59)
+	at org.apache.cxf.bus.extension.ExtensionManagerImpl.loadAndRegister(ExtensionManagerImpl.java:237)
+	at org.apache.cxf.bus.extension.ExtensionManagerImpl.getBeansOfType(ExtensionManagerImpl.java:320)
+	at org.apache.cxf.bus.spring.SpringBeanLocator.getBeansOfType(SpringBeanLocator.java:163)
+	at org.apache.cxf.bus.CXFBusImpl.getExtension(CXFBusImpl.java:108)
+	at org.apache.cxf.bus.CXFBusImpl.initialize(CXFBusImpl.java:206)
+	at org.apache.cxf.bus.spring.SpringBus.setApplicationContext(SpringBus.java:90)
+	at org.springframework.context.support.ApplicationContextAwareProcessor.invokeAwareInterfaces(ApplicationContextAwareProcessor.java:117)
+	at org.springframework.context.support.ApplicationContextAwareProcessor.postProcessBeforeInitialization(ApplicationContextAwareProcessor.java:92)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:396)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1475)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:521)
+	... 28 more
+Caused by: java.lang.ClassNotFoundException: javax.annotation.Resource
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:582)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:185)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:496)
+	... 40 more
+[14/feb. 11:31:52 - context.ContextLoader.initWebApplicationContext - 273] - Root WebApplicationContext: initialization started
+[14/feb. 11:31:52 - support.AbstractApplicationContext.prepareRefresh - 510] - Refreshing Root WebApplicationContext: startup date [Wed Feb 14 11:31:52 CST 2018]; root of context hierarchy
+[14/feb. 11:31:52 - annotation.ClassPathScanningCandidateComponentProvider.registerDefaultFilters - 239] - JSR-330 'javax.inject.Named' annotation found and supported for component scanning
+[14/feb. 11:31:52 - support.AnnotationConfigWebApplicationContext.loadBeanDefinitions - 230] - Successfully resolved class for [mx.com.tecnomotum.integracionlis.config.AppConfig]
+[14/feb. 11:31:52 - annotation.AutowiredAnnotationBeanPostProcessor.<init> - 140] - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[14/feb. 11:31:52 - support.DefaultListableBeanFactory.preInstantiateSingletons - 598] - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@172b013: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,appConfig,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor,cxf,jaxRsServer,swaggerConfig,apiDeclarationProvider,apiListingResourceJson,resourceListingProvider,jaxRsApiApplication,viajeRestService,viajeService,kitConfiguracionRestService,kitConfiguracionService,jsonProvider]; root of factory hierarchy
+[14/feb. 11:31:52 - support.DefaultSingletonBeanRegistry.destroySingletons - 444] - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@172b013: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,appConfig,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor,cxf,jaxRsServer,swaggerConfig,apiDeclarationProvider,apiListingResourceJson,resourceListingProvider,jaxRsApiApplication,viajeRestService,viajeService,kitConfiguracionRestService,kitConfiguracionService,jsonProvider]; root of factory hierarchy
+[14/feb. 11:31:52 - context.ContextLoader.initWebApplicationContext - 319] - Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'cxf' defined in class mx.com.tecnomotum.integracionlis.config.AppConfig: Initialization of bean failed; nested exception is java.lang.NoClassDefFoundError: javax/annotation/Resource
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:295)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:292)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:628)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:932)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:479)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:389)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:294)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:112)
+	at org.eclipse.jetty.server.handler.ContextHandler.callContextInitialized(ContextHandler.java:800)
+	at org.eclipse.jetty.servlet.ServletContextHandler.callContextInitialized(ServletContextHandler.java:444)
+	at org.eclipse.jetty.server.handler.ContextHandler.startContext(ContextHandler.java:791)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:294)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:741)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:114)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+	at org.eclipse.jetty.server.Server.start(Server.java:387)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:114)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:354)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at mx.com.tecnomotum.integracionlis.Starter.main(Starter.java:58)
+Caused by: java.lang.NoClassDefFoundError: javax/annotation/Resource
+	at org.apache.cxf.common.injection.ResourceInjector.<clinit>(ResourceInjector.java:59)
+	at org.apache.cxf.bus.extension.ExtensionManagerImpl.loadAndRegister(ExtensionManagerImpl.java:237)
+	at org.apache.cxf.bus.extension.ExtensionManagerImpl.getBeansOfType(ExtensionManagerImpl.java:320)
+	at org.apache.cxf.bus.spring.SpringBeanLocator.getBeansOfType(SpringBeanLocator.java:163)
+	at org.apache.cxf.bus.CXFBusImpl.getExtension(CXFBusImpl.java:108)
+	at org.apache.cxf.bus.CXFBusImpl.initialize(CXFBusImpl.java:206)
+	at org.apache.cxf.bus.spring.SpringBus.setApplicationContext(SpringBus.java:90)
+	at org.springframework.context.support.ApplicationContextAwareProcessor.invokeAwareInterfaces(ApplicationContextAwareProcessor.java:117)
+	at org.springframework.context.support.ApplicationContextAwareProcessor.postProcessBeforeInitialization(ApplicationContextAwareProcessor.java:92)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:396)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1475)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:521)
+	... 28 more
+Caused by: java.lang.ClassNotFoundException: javax.annotation.Resource
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:582)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:185)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:496)
+	... 40 more
